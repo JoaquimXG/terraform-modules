@@ -9,7 +9,7 @@ resource aws_instance instance {
   instance_type = var.instance_type
   hibernation = var.hibernation
 
-  root_block_device = {
+  root_block_device {
    encrypted = var.hibernation 
   }
 
