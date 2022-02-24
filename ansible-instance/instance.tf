@@ -9,6 +9,10 @@ resource aws_instance instance {
   instance_type = var.instance_type
   hibernation = var.hibernation
 
+  root_block_device = {
+   encrypted = var.hibernation 
+  }
+
   subnet_id = var.subnet_id
   availability_zone = var.az
 
