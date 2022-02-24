@@ -7,6 +7,7 @@ resource aws_instance instance {
   ami           = data.aws_ami.image.id
   key_name = var.key_name
   instance_type = var.instance_type
+  hibernation = var.hibernation
 
   subnet_id = var.subnet_id
   availability_zone = var.az

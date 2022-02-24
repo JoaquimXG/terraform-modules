@@ -9,6 +9,11 @@ variable ansible_vars {
   type = map
 }
 
+variable hibernation {
+  type = bool
+  default = false
+}
+
 variable ami {
   type = map(string)
   default = {
