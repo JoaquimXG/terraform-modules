@@ -1,6 +1,6 @@
 resource aws_security_group sg {
     count = var.security_group_id == null ? 1 : 0
-    name = "ssh_http_${var.tag_name}"
+    name = "ssh_http_${var.tags.Name}"
     description = "Allow inbound HTTP and SSH"
     vpc_id = var.vpc_id
 
@@ -40,6 +40,6 @@ resource aws_security_group sg {
     }
 
     tags = {
-        Name = "sg-ssh_http_${var.tag_name}"
+        Name = "sg-ssh_http_${var.tags.Name}"
     }
 }
