@@ -8,7 +8,7 @@ variable tags {
 
   validation {
     condition = length(var.tags.Name) > 0
-    error_message = "Name tag must be provided"
+    error_message = "Name tag must be provided."
   }
 }
 
