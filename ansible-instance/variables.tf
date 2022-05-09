@@ -1,8 +1,16 @@
-variable tag_name {}
 variable region {}
 variable az {}
 variable vpc_id {}
 variable subnet_id {}
+
+variable tags {
+  type = map(string)
+
+  validation {
+    condition = length(var.tags.Name) > 0
+    error_message = "Name tag must be provided"
+  }
+}
 
 variable playbook_path {}
 variable ansible_vars {
