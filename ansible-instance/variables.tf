@@ -15,6 +15,9 @@ variable tags {
 variable playbook_path {}
 variable ansible_vars {
   type = map
+  default = {
+    placeholder = null
+  }
 }
 
 variable hibernation {
